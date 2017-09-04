@@ -1,0 +1,29 @@
+[user]
+	name = Ryan Gorup
+	email = gorup@users.noreply.github.com
+[color "diff"]
+ 	meta = yellow bold
+ 	frag = magenta bold
+	old = red
+	new = cyan
+[alias]
+        g = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+        st = status
+	co = checkout
+	cc = commit -a -m 'quick commit'
+	cam = commit -a -m
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+[color]
+	diff = always
+	ui = auto
+[core]
+	excludesfile = /Users/ryangorup/.gitignore_global
+	pager = less -FMRiX
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[push]
+	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
